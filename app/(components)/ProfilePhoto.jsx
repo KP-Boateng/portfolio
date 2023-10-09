@@ -7,7 +7,7 @@ import { SpaceBold, SpaceMedium } from "../(fonts)/font";
 const ProfilePhoto = () => {
   return (
     <div className=" p-3 justify-center items-center ">
-      <Image src={profilePhoto} className=" rounded-lg" />
+      <Image src={profilePhoto} className=" rounded-2xl" />
       <div className="flex flex-col gap-1 mt-2">
         <div>
           <h1
