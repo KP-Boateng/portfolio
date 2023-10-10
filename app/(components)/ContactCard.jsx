@@ -4,10 +4,16 @@ import {
   LocationOnOutlined,
   DownloadOutlined,
 } from "@mui/icons-material";
+import { useAppContext } from "./AppContext";
 
-const ContactCard = ({ theme }) => {
+const ContactCard = () => {
+  const { theme, setTheme } = useAppContext();
   return (
-    <div className={`flex flex-col gap-2 mt-6 rounded-md p-3 w-full`}>
+    <div
+      className={`flex flex-col gap-2 mt-6 rounded-md p-3 w-full ${
+        theme === "light" ? "bg-slate-200" : "bg-slate-900"
+      } `}
+    >
       <div className="flex gap-2 justify-center items-center border-orange-400 border-b-2">
         <div>
           <PhoneAndroidOutlined sx={{ color: "orange" }} />

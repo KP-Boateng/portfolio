@@ -11,11 +11,14 @@ import {
   ContactsOutlined,
 } from "@mui/icons-material";
 import { useState } from "react";
+import { SpaceMedium } from "../(fonts)/font";
 
 const NavButtons = () => {
   // const [buttonClicked, setButtonClicked] = useState("about");
   return (
-    <div className=" p-3 flex gap-6 justify-end items-center">
+    <div
+      className={` p-3 flex gap-6 justify-end items-center ${SpaceMedium.className}`}
+    >
       <div className="flex flex-col gap-2 justify-center items-center">
         <div>
           <button

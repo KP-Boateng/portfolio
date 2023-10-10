@@ -1,3 +1,4 @@
+import { AppProvider } from "./(components)/AppContext";
 import Header from "./(components)/Header";
 import NavButtons from "./(components)/NavButtons";
 import ProfilePhoto from "./(components)/ProfilePhoto";
@@ -13,22 +14,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${InriaRegular.className} p-4 gap-8 h-full flex-1 rounded-lg flex flex-col`}
+        className={`${InriaRegular.className} p-4 gap-8 h-full rounded-lg flex flex-col bg-slate-200`}
       >
-        <div>
-          <Header />
-        </div>
-        <div className=" gap-4 h-full flex-1  flex flex-col sm:flex-row">
-          <div className=" h-max bg-slate-200 rounded-2xl  sm:w-1/2 md:w-1/3">
-            <ProfilePhoto />
+        <AppProvider>
+          <div>
+            <Header />
           </div>
-          <div className="flex-1 flex flex-col bg-slate-200 rounded-2xl sm:1/2 md:2/3">
-            <div className=" ">
-              <NavButtons />
+          <div className=" gap-4 h-full flex-1  flex flex-col sm:flex-row">
+            <div className=" h-max  sm:w-1/2 md:w-1/3">
+              <ProfilePhoto />
             </div>
-            <div className=" flex-">{children}</div>
+            <div className="flex-1 flex flex-col bg-white rounded-2xl sm:1/2 md:2/3">
+              <div>
+                <NavButtons />
+              </div>
+              <div className=" flex-1">{children}</div>
+            </div>
           </div>
-        </div>
+        </AppProvider>
       </body>
     </html>
   );

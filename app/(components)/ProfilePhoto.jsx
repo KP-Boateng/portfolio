@@ -1,13 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import profilePhoto from "../../public/photo_2_2023-10-01_00-33-11.jpg";
 import { GitHub, LinkedIn, WhatsApp, YouTube } from "@mui/icons-material";
 import ContactCard from "./ContactCard";
 import { SpaceBold, SpaceMedium } from "../(fonts)/font";
+import { useAppContext } from "./AppContext";
 
 const ProfilePhoto = () => {
+  const { theme, setTheme } = useAppContext();
   return (
-    <div className=" p-3 justify-center items-center ">
-      <Image src={profilePhoto} className=" rounded-2xl" />
+    <div
+      className={` p-3 justify-center items-center rounded-2xl  ${
+        theme === "light" ? "bg-white" : "bg-slate-900 text-white"
+      } `}
+    >
+      <Image src={profilePhoto} className=" rounded-2xl" alt="profile photo" />
       <div className="flex flex-col gap-1 mt-2">
         <div>
           <h1
