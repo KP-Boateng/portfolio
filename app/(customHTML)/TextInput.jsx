@@ -41,6 +41,7 @@ const TextInput = ({
       </div>
       <div>
         <input
+          name={name}
           type={type}
           className={inputStyle}
           value={input}

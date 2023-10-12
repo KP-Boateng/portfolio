@@ -42,7 +42,7 @@ const ContactCard = () => {
         </div>
       </div>
       <div className="flex gap-2 justify-center items-center border-orange-400 border-b-2 py-4">
-        <button className="flex justify-center items-center gap-2 bg-orange-600 border-white border-2 p-2 rounded-lg">
+        <button className="flex justify-center items-center gap-2 bg-orange-600  border-white border-2 p-2 rounded-lg">
           <DownloadOutlined />
           <div>
             <h1 className="font-semibold">Download Resume</h1>

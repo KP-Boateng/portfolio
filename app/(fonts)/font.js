@@ -11,6 +11,7 @@ const SpaceRegular = localFont({
 
 const SpaceMedium = localFont({ src: "../../public/SpaceGrotesk-Medium.ttf" });
 const SpaceBold = localFont({ src: "../../public/SpaceGrotesk-Bold.ttf" });
+const RobotoRegular = localFont({ src: "../../public/Roboto-Regular.ttf" });
 export {
   InriaRegular,
   SpaceRegular,
@@ -18,4 +19,5 @@ export {
   MontserratRegular,
   MontserratBold,
   SpaceMedium,
+  RobotoRegular,
 };

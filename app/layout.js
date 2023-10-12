@@ -1,8 +1,10 @@
 import { AppProvider } from "./(components)/AppContext";
+import AppWraper from "./(components)/AppWraper";
 import Header from "./(components)/Header";
+import MainBodyContent from "./(components)/MainBodyContent";
 import NavButtons from "./(components)/NavButtons";
 import ProfilePhoto from "./(components)/ProfilePhoto";
-import { InriaRegular } from "./(fonts)/font";
+import { InriaRegular, MontserratRegular, RobotoRegular } from "./(fonts)/font";
 import "./globals.css";
 
 export const metadata = {
@@ -13,24 +15,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${InriaRegular.className} p-4 gap-8 h-full rounded-lg flex flex-col bg-slate-200`}
-      >
+      <body className={`${InriaRegular.className}  `}>
         <AppProvider>
-          <div>
-            <Header />
-          </div>
-          <div className=" gap-4 h-full flex-1  flex flex-col sm:flex-row">
-            <div className=" h-max  sm:w-1/2 md:w-1/3">
-              <ProfilePhoto />
+          <AppWraper>
+            <div>
+              <Header />
             </div>
-            <div className="flex-1 flex flex-col bg-white rounded-2xl sm:1/2 md:2/3">
-              <div>
-                <NavButtons />
+            <div className=" gap-4 h-full flex-1  flex flex-col sm:flex-row">
+              <div className=" h-max  sm:w-1/2 md:w-1/3">
+                <ProfilePhoto />
               </div>
-              <div className=" flex-1">{children}</div>
+              <>
+                <MainBodyContent LayoutPage={children} />
+              </>
             </div>
-          </div>
+          </AppWraper>
         </AppProvider>
       </body>
     </html>

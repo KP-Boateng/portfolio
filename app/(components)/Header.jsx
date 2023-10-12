@@ -6,17 +6,14 @@ import { useAppContext } from "./AppContext";
 
 const Header = () => {
   const { theme, setTheme } = useAppContext();
-  console.log(theme);
   return (
     <div
-      className={`w-full bg-transparent flex p-2 ${SpaceBold.className} $${
-        theme === "light" ? "bg-slate-200" : "bg-red-500"
+      className={`w-full bg-transparent flex p-2 ${SpaceBold.className} ${
+        theme === "light" ? "text-black" : "text-white"
       }`}
     >
       <div
-        className={` flex-8 flex justify-center items-center text-xl md:text-4xl ${
-          theme === "light" ? " text-black" : "text-white"
-        }`}
+        className={` flex-8 flex justify-center items-center text-xl md:text-4xl `}
       >
         Boateng Paul Okeoghene
       </div>

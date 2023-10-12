@@ -6,7 +6,8 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
-  const value = { theme, setTheme };
+  const [page, setPage] = useState("about");
+  const value = { theme, setTheme, page, setPage };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
