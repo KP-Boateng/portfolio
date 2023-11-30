@@ -61,7 +61,7 @@ const ProfilePhoto = () => {
         </div>
       </div>
       <div className="flex gap-2 w-full mt-3">
-        <div className="flex-1">
+        {/* <div className="flex-1">
           <a
             href="https://wa.me/+233556849078"
             rel="noreferrer"
@@ -71,7 +71,7 @@ const ProfilePhoto = () => {
               <WhatsApp />
             </button>
           </a>
-        </div>
+        </div> */}
         <div className="flex-1">
           <button className=" text-blue-400 p-1 h-full w-full rounded-md">
             <a

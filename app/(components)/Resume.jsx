@@ -1,6 +1,6 @@
 import { SchoolOutlined } from "@mui/icons-material";
 import { useAppContext } from "./AppContext";
-import { SpaceBold, SpaceMedium } from "../(fonts)/font";
+import { SpaceBold } from "../(fonts)/font";
 
 const Resume = () => {
   const { theme } = useAppContext();
@@ -10,7 +10,7 @@ const Resume = () => {
       <div className="bg-orange-400 h-1"></div>
       <div className=" mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="flex flex-col gap-4">
-          <div className="flex gap-2 flex-1">
+          <div className="flex gap-2 ">
             <div>
               <SchoolOutlined
                 sx={{ color: theme === "light" ? "orange" : "white" }}
@@ -20,22 +20,22 @@ const Resume = () => {
               <h1 className={` text-xl font-bold`}>Education</h1>
             </div>
           </div>
-          <div className=" grid grid-cols-1 gap-4">
-            <div
-              className={`flex flex-col gap-1 py-4 px-2  rounded-lg font-mono font-semibold ${
-                theme === "light "
-                  ? "text-black bg-orange-300"
-                  : "text-white bg-slate-400"
-              }`}
-            >
-              <h1>2016 - 2019</h1>
-              <h1>General Science</h1>
-              <h1>Armed Forces Senior High Technical School, Kumasi</h1>
-            </div>
+          {/* <div className=" grid grid-cols-1 gap-4"> */}
+          <div
+            className={`flex flex-col flex-1 gap-1 py-4 px-2  rounded-lg font-mono font-semibold ${
+              theme === "light "
+                ? "text-black bg-orange-300"
+                : "text-white bg-slate-400"
+            }`}
+          >
+            <h1>2016 - 2019</h1>
+            <h1>General Science</h1>
+            <h1>Armed Forces Senior High Technical School, Kumasi</h1>
           </div>
+          {/* </div> */}
         </div>
         <div className="flex flex-col gap-4">
-          <div className="flex gap-2 flex-1">
+          <div className="flex gap-2 ">
             <div>
               <SchoolOutlined
                 sx={{ color: theme === "light" ? "orange" : "white" }}
@@ -45,19 +45,24 @@ const Resume = () => {
               <h1 className={` text-xl font-bold `}>Experience</h1>
             </div>
           </div>
-          <div className=" grid grid-cols-1 gap-4">
-            <div
-              className={`flex flex-col gap-1 py-4 px-2  rounded-lg font-mono font-semibold ${
-                theme === "light"
-                  ? "text-black bg-orange-200"
-                  : "text-white bg-slate-400"
-              } `}
-            >
-              <h1>2016 - 2019</h1>
-              <h1>General Science</h1>
-              <h1>Armed Forces Senior High Technical School, Kumasi</h1>
+          {/* <div className=" grid grid-cols-1 gap-4"> */}
+          <div
+            className={`flex flex-col flex-1 gap-1 py-4 px-2  rounded-lg font-mono font-semibold ${
+              theme === "light"
+                ? "text-black bg-orange-200"
+                : "text-white bg-slate-400"
+            } `}
+          >
+            <div>
+              <h1>August 2023 - Date</h1>
+              <h1>Voima Initiative</h1>
+            </div>
+            <div>
+              <h1>October 2023 - Date</h1>
+              <h1>Project Hygieiora</h1>
             </div>
           </div>
+          {/* </div> */}
         </div>
         <div className="flex flex-col gap-4">
           <div className="flex gap-2 ">

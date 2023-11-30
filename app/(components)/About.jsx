@@ -1,4 +1,9 @@
-import { CoPresent, Html, Instagram } from "@mui/icons-material";
+import {
+  CoPresent,
+  Html,
+  Instagram,
+  DesignServices,
+} from "@mui/icons-material";
 import { useAppContext } from "./AppContext";
 
 const About = () => {
@@ -6,22 +11,22 @@ const About = () => {
   return (
     <div className={`w-full py-4 px-2 `}>
       <h1 className={` text-3xl font-mono font-bold mt-4 `}>ABOUT ME</h1>
-      <div className="bg-orange-400 h-1"></div>
+      <div className="bg-orange-500 h-1"></div>
       <p className={` mt-4 font-medium `}>
-        Hello there! I&apos;m Paul, called K.P. Boateng or K.P. for short by my
-        peers and I am thrilled to welcome you to my portfolio. I am a
-        passionate and versatile front-end developer with a keen interest in
+        Hello there! I&apos;m Paul fom Ghana, called K.P. Boateng or K.P. for
+        short by my peers and I am thrilled to welcome you to my portfolio. I am
+        a passionate and versatile front-end developer with a keen interest in
         exploring the latest cutting-edge technologies. My journey in the world
         of web development has been nothing short of exhilarating and I
         constantly strive to enhance my skills and embrace emerging trends in
         the industry.
       </p>
       <h1 className={` text-3xl font-mono font-bold mt-4`}>What I do!</h1>{" "}
-      <div className="bg-orange-400 h-1"></div>
+      <div className="bg-orange-500 h-1"></div>
       <div className="grid grid-cols-1 grid-rows-1 gap-2  mt-4 md:grid-cols-2 ">
         <div
           className={`flex-1 flex flex-col gap-2 w-full p-4 rounded-lg ${
-            theme === "light" ? "bg-orange-400" : "bg-slate-400"
+            theme === "light" ? "bg-orange-500" : "bg-slate-400"
           }`}
         >
           <div className="flex gap-2  items-center">
@@ -37,7 +42,7 @@ const About = () => {
         </div>
         <div
           className={`flex-1 flex flex-col gap-2 w-full p-4 rounded-lg ${
-            theme === "light" ? "bg-slate-200" : "bg-orange-400"
+            theme === "light" ? "bg-slate-200" : "bg-orange-500"
           }`}
         >
           <div className="flex gap-2  items-center">
@@ -55,7 +60,27 @@ const About = () => {
         </div>
         <div
           className={`flex-1 flex flex-col gap-2 w-full p-4 rounded-lg ${
-            theme === "light" ? "bg-orange-400" : "bg-slate-400"
+            theme === "light" ? "bg-slate-200" : "bg-orange-500"
+          }`}
+        >
+          <div className="flex gap-2  items-center">
+            <DesignServices
+              sx={{ color: theme === "light" ? "orange" : "white" }}
+            />
+            <h1 className={` text-xl font-bold `}>UI/UX Design</h1>
+          </div>
+          <div className=" flex-1">
+            <p className={` w-full font-medium `}>
+              I am immersing myself into the world of UI/UX Design to craft
+              seamless and engaging user experiences. This expansion of my
+              skillset reflects my commitment to delivering holistic and
+              captivating digital solutions.
+            </p>
+          </div>
+        </div>
+        <div
+          className={`flex-1 flex flex-col gap-2 w-full p-4 rounded-lg ${
+            theme === "light" ? "bg-orange-500" : "bg-slate-400"
           }`}
         >
           <div className="flex gap-2  items-center ">

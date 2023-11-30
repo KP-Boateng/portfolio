@@ -5,6 +5,7 @@ import {
   DownloadOutlined,
 } from "@mui/icons-material";
 import { useAppContext } from "./AppContext";
+import Link from "next/link";
 
 const ContactCard = () => {
   const { theme, setTheme } = useAppContext();
@@ -42,12 +43,18 @@ const ContactCard = () => {
         </div>
       </div>
       <div className="flex gap-2 justify-center items-center border-orange-400 border-b-2 py-4">
-        <button className="flex justify-center items-center gap-2 bg-orange-600  border-white border-2 p-2 rounded-lg">
+        <Link
+          href={
+            "https://drive.google.com/file/d/1YQniyMXiq-87ufUnysHVdKmw8SwyCa4w/view?usp=sharing"
+          }
+          target="_blank"
+          className="flex justify-center items-center gap-2 bg-orange-600  border-white border-2 p-2 rounded-lg"
+        >
           <DownloadOutlined />
           <div>
             <h1 className="font-semibold">Download Resume</h1>
           </div>
-        </button>
+        </Link>
       </div>
     </div>
   );

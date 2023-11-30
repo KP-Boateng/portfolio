@@ -21,12 +21,16 @@ const Contact = () => {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
+  const showToastErrorMessage = () => {
+    toast.success(
+      "Email Not Sent. Please check your Internet connection and try again!",
+      {
+        position: toast.POSITION.TOP_RIGHT,
+      }
+    );
+  };
   const onSubmitForm = (e) => {
     e.preventDefault();
-    showToastMessage();
-    setEmail("");
-    setName("");
-    setDescription("");
 
     emailjs
       .sendForm(
@@ -38,9 +42,14 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setEmail("");
+          setName("");
+          setDescription("");
+
+          showToastMessage();
         },
         (error) => {
-          console.log(error.text);
+          showToastErrorMessage();
         }
       );
   };
